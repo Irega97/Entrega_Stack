@@ -12,6 +12,16 @@ public class StackImplementation<T> implements Stack<T> {
         this.limit = var;
     }
 
+    private void getLimit(){
+        return this.limit;
+    }
+
+    public boolean llena(){
+        if(p>limit)
+            return true;
+        else return false;
+    }
+
     @Override
     public void push(T t) throws PilaLlenaException {
 
