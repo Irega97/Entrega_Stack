@@ -12,7 +12,7 @@ public class StackImplementation<T> implements Stack<T> {
         this.limit = var;
     }
 
-    private void getLimit(){
+    private int getLimit(){
         return this.limit;
     }
 
