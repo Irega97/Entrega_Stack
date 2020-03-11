@@ -5,6 +5,7 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 public class StackTest {
+
     private StackImplementation<Integer> pilaLimite;
 
     @Before
@@ -14,6 +15,7 @@ public class StackTest {
         pilaLimite.push(1);
         pilaLimite.push(2);
     }
+
     @Test(expected = PilaLlenaException.class)
     public void testPlena() throws Exception
     {
@@ -22,6 +24,7 @@ public class StackTest {
         pilaLimite.push(5);
         pilaLimite.push(3);
     }
+
     @Test(expected=PilaVaciaException.class)
     public void testBuida() throws Exception
     {

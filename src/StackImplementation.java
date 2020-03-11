@@ -5,6 +5,7 @@ public class StackImplementation<T> implements Stack<T> {
     private int limit;
     private int p;
     private T[] data;
+
     public StackImplementation(int num){
         data= (T[]) new Object[num];
         setLimit(num);
