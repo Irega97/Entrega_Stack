@@ -24,16 +24,28 @@ public class StackImplementation<T> implements Stack<T> {
 
     @Override
     public void push(T t) throws PilaLlenaException {
+        if(this.llena())
+        {
+            throw new PilaLlenaException();
+        }
+        this.data[this.p++]=t;
+        this.p++;
 
     }
 
     @Override
     public T pop() throws PilaVaciaException {
-        return null;
+        if(this.size()==0)
+        {
+            throw new PilaVaciaException();
+        }
+        T t=this.data[this.p--];
+        this.p--;
+        return t;
     }
 
     @Override
     public int size() {
-        return 0;
+        return p;
     }
 }
